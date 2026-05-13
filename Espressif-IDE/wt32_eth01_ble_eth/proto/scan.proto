@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package ripas;
+
+message BleEvent {
+  bytes mac = 1;
+  sint32 rssi = 2;
+  bytes adv_data = 3;
+  uint64 utc_ms = 4;
+  uint64 monotonic_ms = 5;
+  bool time_sync = 6;
+}
+
+message DeviceInfo {
+  string device_id = 1;
+  string fw_version = 2;
+}
+
+message ScanBatch {
+  DeviceInfo device = 1;
+  repeated BleEvent ble = 2;
+  uint64 batch_seq = 3;
+}

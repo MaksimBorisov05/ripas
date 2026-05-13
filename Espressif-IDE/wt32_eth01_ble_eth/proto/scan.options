@@ -1,0 +1,3 @@
+ripas.BleEvent.mac max_size:6
+ripas.BleEvent.adv_data max_size:31
+ripas.ScanBatch.ble max_count:10
